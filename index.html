@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduTrack — Smart College Attendance Management</title>
+<meta name="description" content="EduTrack helps colleges track attendance, manage students, teachers and departments, and generate real-time analytics.">
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Page loader -->
+<div class="page-loader">
+  <div class="loader-ring"></div>
+  <p>Loading EduTrack…</p>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="17" stroke="url(#navGrad)" stroke-width="4" stroke-dasharray="80" stroke-dashoffset="18" stroke-linecap="round"/>
+        <defs><linearGradient id="navGrad" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#4cc9f0"/><stop offset="1" stop-color="#7209b7"/></linearGradient></defs>
+      </svg>
+      EduTrack
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="login.html" class="btn btn-primary btn-sm">Login</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost btn-sm">Sign in</a>
+      <a href="login.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="home">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow"><i class="fa-solid fa-circle-check"></i> Trusted by 40+ colleges</span>
+      <h1>Attendance tracking that finally feels <span>effortless</span>.</h1>
+      <p>EduTrack replaces registers and spreadsheets with one live dashboard — for admins, teachers and students — so nobody has to chase attendance data ever again.</p>
+      <div class="hero-ctas">
+        <a href="login.html" class="btn btn-primary">Get Started Free <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#features" class="btn btn-ghost">See how it works</a>
+      </div>
+      <div class="hero-trust">
+        <div><strong data-count="98" data-suffix="%">0%</strong><span>Attendance accuracy</span></div>
+        <div><strong data-count="12" data-suffix="k+">0</strong><span>Students tracked</span></div>
+        <div><strong data-count="5" data-suffix="min">0</strong><span>Setup time</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ring-card">
+        <svg class="ring-svg" viewBox="0 0 260 260">
+          <defs>
+            <linearGradient id="ringGradient" x1="0" y1="0" x2="260" y2="260">
+              <stop offset="0%" stop-color="#4cc9f0"/>
+              <stop offset="100%" stop-color="#7209b7"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-track" cx="130" cy="130" r="120"/>
+          <circle class="ring-progress" cx="130" cy="130" r="120"/>
+        </svg>
+        <div class="ring-center"><strong>92%</strong><span>Live class attendance</span></div>
+      </div>
+      <div class="ring-float-card glass ring-float-card card-a"><i class="fa-solid fa-user-graduate"></i> <div><strong style="display:block;font-size:.85rem;">Aditi Sharma</strong><span style="font-size:.72rem;color:var(--c-muted);">marked present</span></div></div>
+      <div class="ring-float-card glass ring-float-card card-b"><i class="fa-solid fa-chart-line"></i> <div><strong style="display:block;font-size:.85rem;">+4.2%</strong><span style="font-size:.72rem;color:var(--c-muted);">this week</span></div></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><div class="mouse"></div><span>Scroll to explore</span></div>
+</header>
+
+<!-- Stats -->
+<section class="section" aria-label="Platform statistics">
+  <div class="container">
+    <div class="stats-grid reveal-stagger reveal">
+      <div class="glass stat-card"><i class="fa-solid fa-school"></i><div class="stat-num" data-count="40" data-suffix="+">0</div><span>Colleges onboarded</span></div>
+      <div class="glass stat-card"><i class="fa-solid fa-user-graduate"></i><div class="stat-num" data-count="12000" data-suffix="+">0</div><span>Students tracked</span></div>
+      <div class="glass stat-card"><i class="fa-solid fa-chalkboard-user"></i><div class="stat-num" data-count="850" data-suffix="+">0</div><span>Faculty members</span></div>
+      <div class="glass stat-card"><i class="fa-solid fa-clock"></i><div class="stat-num" data-count="6" data-suffix="min">0</div><span>Saved per class, daily</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Features</span>
+      <h2>Everything a campus needs, <span class="text-gradient">in one place</span></h2>
+      <p>Role-based dashboards for admins, teachers and students, built around real class schedules.</p>
+    </div>
+    <div class="features-grid reveal-stagger reveal">
+      <div class="glass feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-fingerprint"></i></div>
+        <h3>One-tap roll call</h3>
+        <p>Teachers mark an entire section present or absent in under a minute, with instant Firestore sync.</p>
+      </div>
+      <div class="glass feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>Live analytics</h3>
+        <p>Attendance trends, department comparisons and defaulter lists, visualized the moment data lands.</p>
+      </div>
+      <div class="glass feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-users-gear"></i></div>
+        <h3>Full admin control</h3>
+        <p>Manage students, teachers, departments and subjects from a single, searchable console.</p>
+      </div>
+      <div class="glass feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <h3>Student self-service</h3>
+        <p>Students track their own percentage, subject-wise breakdown and monthly calendar in real time.</p>
+      </div>
+      <div class="glass feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-file-export"></i></div>
+        <h3>Instant exports</h3>
+        <p>Generate daily or monthly attendance reports and export them straight to Excel or PDF.</p>
+      </div>
+      <div class="glass feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure by design</h3>
+        <p>Firebase Authentication and role-based access keep student records private and auditable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container about-wrap">
+    <div class="reveal">
+      <span class="eyebrow">About EduTrack</span>
+      <h2>Built with faculty, for the way classes actually run</h2>
+      <p style="color:var(--c-muted); margin-top:1rem;">EduTrack started as a request from a single computer science department that was still reconciling paper registers by hand. Three semesters later, it's the attendance system for the whole campus — because it was designed around real timetables, not a generic form.</p>
+      <ul class="about-list mt-2">
+        <li><i class="fa-solid fa-circle-check"></i> Works across Admin, Teacher and Student roles out of the box</li>
+        <li><i class="fa-solid fa-circle-check"></i> Firebase-backed, so data stays in sync across every device</li>
+        <li><i class="fa-solid fa-circle-check"></i> Reports ready for accreditation audits in one click</li>
+      </ul>
+    </div>
+    <div class="glass about-card reveal">
+      <div class="grid-2" style="grid-template-columns:1fr 1fr;">
+        <div>
+          <h3 class="text-gradient" style="font-size:2rem;">99.9%</h3>
+          <p style="color:var(--c-muted); font-size:.85rem;">Platform uptime</p>
+        </div>
+        <div>
+          <h3 class="text-gradient" style="font-size:2rem;">24/7</h3>
+          <p style="color:var(--c-muted); font-size:.85rem;">Support coverage</p>
+        </div>
+        <div>
+          <h3 class="text-gradient" style="font-size:2rem;">3</h3>
+          <p style="color:var(--c-muted); font-size:.85rem;">Role-based dashboards</p>
+        </div>
+        <div>
+          <h3 class="text-gradient" style="font-size:2rem;">GDPR</h3>
+          <p style="color:var(--c-muted); font-size:.85rem;">Compliant data handling</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Let's bring EduTrack to your campus</h2>
+      <p>Tell us about your department and we'll set up a walkthrough.</p>
+    </div>
+    <div class="contact-wrap reveal">
+      <form class="glass" style="padding:2.4rem;" id="contactForm">
+        <div class="form-group">
+          <label for="cName">Full name</label>
+          <input class="form-control" id="cName" type="text" placeholder="Jordan Lee" required>
+        </div>
+        <div class="form-group">
+          <label for="cEmail">College email</label>
+          <input class="form-control" id="cEmail" type="email" placeholder="you@college.edu" required>
+        </div>
+        <div class="form-group">
+          <label for="cMsg">Message</label>
+          <textarea class="form-control" id="cMsg" placeholder="Tell us about your department size and needs…" required></textarea>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        <p class="form-msg"></p>
+      </form>
+      <div class="glass" style="padding:2.4rem;">
+        <h3 style="margin-bottom:1.2rem;">Reach us directly</h3>
+        <p style="color:var(--c-muted); display:flex; gap:.7rem; margin-bottom:1rem;"><i class="fa-solid fa-envelope" style="color:var(--c-blue-light);"></i> hello@edutrack.app</p>
+        <p style="color:var(--c-muted); display:flex; gap:.7rem; margin-bottom:1rem;"><i class="fa-solid fa-phone" style="color:var(--c-blue-light);"></i> +1 (555) 010-2024</p>
+        <p style="color:var(--c-muted); display:flex; gap:.7rem; margin-bottom:1.6rem;"><i class="fa-solid fa-location-dot" style="color:var(--c-blue-light);"></i> Innovation Hub, Campus Drive</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:1rem; display:inline-flex;">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="17" stroke="url(#footGrad)" stroke-width="4" stroke-dasharray="80" stroke-dashoffset="18" stroke-linecap="round"/>
+            <defs><linearGradient id="footGrad" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#4cc9f0"/><stop offset="1" stop-color="#7209b7"/></linearGradient></defs>
+          </svg>
+          EduTrack
+        </a>
+        <p style="color:var(--c-muted); font-size:.88rem; max-width:280px;">The attendance operating system for modern colleges — built for admins, teachers and students alike.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 EduTrack. All rights reserved.</span>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="login.html" class="fab glass" aria-label="Login" title="Login"><i class="fa-solid fa-right-to-bracket"></i></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

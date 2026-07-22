@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in — EduTrack</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-ring"></div><p>Loading EduTrack…</p></div>
+
+<div class="auth-shell">
+  <div class="orb orb-1" style="position:fixed;"></div>
+  <div class="orb orb-2" style="position:fixed;"></div>
+
+  <div style="position:absolute; top:2rem; left:2rem;">
+    <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Back to home</a>
+  </div>
+
+  <div class="auth-card glass">
+    <!-- Decorative side -->
+    <div class="auth-side">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> EduTrack</span>
+        <h2 style="margin-top:.6rem; font-size:1.6rem;">Welcome back to your campus dashboard</h2>
+        <p style="color:var(--c-muted); margin-top:.8rem; font-size:.92rem;">Sign in to mark attendance, review analytics, or check your own record — whichever role fits you.</p>
+      </div>
+      <div class="ring-card">
+        <svg class="ring-svg" viewBox="0 0 260 260">
+          <defs>
+            <linearGradient id="ringGradientLogin" x1="0" y1="0" x2="260" y2="260">
+              <stop offset="0%" stop-color="#4cc9f0"/><stop offset="100%" stop-color="#7209b7"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-track" cx="130" cy="130" r="120"/>
+          <circle class="ring-progress" cx="130" cy="130" r="120" style="stroke:url(#ringGradientLogin);"/>
+        </svg>
+        <div class="ring-center"><strong>92%</strong><span>avg. attendance</span></div>
+      </div>
+      <p style="font-size:.78rem; color:var(--c-muted);">Don't have an account? Contact your college administrator.</p>
+    </div>
+
+    <!-- Form side -->
+    <div class="auth-form-side">
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-target="panel-student">Student</button>
+        <button class="auth-tab" data-target="panel-teacher">Teacher</button>
+        <button class="auth-tab" data-target="panel-admin">Admin</button>
+      </div>
+
+      <!-- Student -->
+      <div class="auth-panel active" id="panel-student">
+        <form data-role="student">
+          <div class="form-group input-icon-group">
+            <label>Email</label>
+            <i class="fa-solid fa-envelope field-icon"></i>
+            <input type="email" class="form-control" placeholder="student@college.edu" required>
+          </div>
+          <div class="form-group input-icon-group">
+            <label>Password</label>
+            <i class="fa-solid fa-lock field-icon"></i>
+            <input type="password" class="form-control" placeholder="••••••••" required>
+            <i class="fa-solid fa-eye toggle-pass"></i>
+          </div>
+          <div class="form-row-between">
+            <label class="checkbox-wrap"><input type="checkbox" class="remember-check"> Remember me</label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign in as Student <i class="fa-solid fa-arrow-right"></i></button>
+          <p class="form-msg"></p>
+        </form>
+      </div>
+
+      <!-- Teacher -->
+      <div class="auth-panel" id="panel-teacher">
+        <form data-role="teacher">
+          <div class="form-group input-icon-group">
+            <label>Email</label>
+            <i class="fa-solid fa-envelope field-icon"></i>
+            <input type="email" class="form-control" placeholder="teacher@college.edu" required>
+          </div>
+          <div class="form-group input-icon-group">
+            <label>Password</label>
+            <i class="fa-solid fa-lock field-icon"></i>
+            <input type="password" class="form-control" placeholder="••••••••" required>
+            <i class="fa-solid fa-eye toggle-pass"></i>
+          </div>
+          <div class="form-row-between">
+            <label class="checkbox-wrap"><input type="checkbox" class="remember-check"> Remember me</label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign in as Teacher <i class="fa-solid fa-arrow-right"></i></button>
+          <p class="form-msg"></p>
+        </form>
+      </div>
+
+      <!-- Admin -->
+      <div class="auth-panel" id="panel-admin">
+        <form data-role="admin">
+          <div class="form-group input-icon-group">
+            <label>Email</label>
+            <i class="fa-solid fa-envelope field-icon"></i>
+            <input type="email" class="form-control" placeholder="admin@college.edu" required>
+          </div>
+          <div class="form-group input-icon-group">
+            <label>Password</label>
+            <i class="fa-solid fa-lock field-icon"></i>
+            <input type="password" class="form-control" placeholder="••••••••" required>
+            <i class="fa-solid fa-eye toggle-pass"></i>
+          </div>
+          <div class="form-row-between">
+            <label class="checkbox-wrap"><input type="checkbox" class="remember-check"> Remember me</label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign in as Admin <i class="fa-solid fa-arrow-right"></i></button>
+          <p class="form-msg"></p>
+        </form>
+      </div>
+
+      <div class="auth-divider">demo mode</div>
+      <p style="font-size:.78rem; color:var(--c-muted); text-align:center;">Any email + password works while Firebase is not yet connected. See <code>js/firebase-config.js</code>.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
